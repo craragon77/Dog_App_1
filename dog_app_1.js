@@ -7,19 +7,21 @@
         .then(responseJSON => displayResults(responseJSON))
         .catch(alert("Ruh_Roh! Something went wrong! Maybe try again later"))
 } */
-function submitTheForm(){
-    $(".submit").click(function(event){
-        event.preventDefault();
-        //alert("hello, Dave")
-    })
-}
+
 
 function storeNumber(){
     $(".submit").submit(function(event){
         event.preventDefault();
-        let number = $("input::number").val()
+        const number = $(".number").val()
+        console.log(number)
     })
-    console.log(number)
+}
+
+function submitTheForm(){
+    $(".submit").click(function(event){
+        event.preventDefault();
+        alert("your number is: " + number)
+    })
 }
 
 function displayDogImage(){
