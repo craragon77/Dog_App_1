@@ -9,9 +9,17 @@
 } */
 function submitTheForm(){
     $(".submit").click(function(event){
-        let number = $("input:number")
-        console.log(number)
+        event.preventDefault();
+        //alert("hello, Dave")
     })
+}
+
+function storeNumber(){
+    $(".submit").submit(function(event){
+        event.preventDefault();
+        let number = $("input::number").val()
+    })
+    console.log(number)
 }
 
 function displayDogImage(){
@@ -23,3 +31,5 @@ function displayDogImage(){
 function funTitle(){
     $(".doge").removeClass(hidden)
 }
+
+submitTheForm()
