@@ -12,7 +12,7 @@
 function storeNumber(){
     $(".submit").submit(function(event){
         event.preventDefault();
-        const number = $(".number").val()
+        let number = $(".number").val()
         console.log(number)
     })
 }
