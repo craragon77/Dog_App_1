@@ -8,9 +8,9 @@
         .catch(alert("Ruh_Roh! Something went wrong! Maybe try again later"))
 } */
 function submitTheForm(){
-    $(".submit").on("click", "submit", function(event){
-        event.preventDefault()
-        alert("hello, Dave")
+    $(".submit").click(function(event){
+        let number = $("input:number")
+        console.log(number)
     })
 }
 
