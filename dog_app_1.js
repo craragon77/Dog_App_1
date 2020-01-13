@@ -1,30 +1,25 @@
 'use strict'
 
 
-/*function fetchDogImage(){
-    fetch('https://dog.ceo/api/breeds/image/random/3')
+function fetchDogImage(){
+        fetch('https://dog.ceo/api/breeds/image/random/' + number, 3)
         .then(response => response.json())
-        .then(responseJSON => displayResults(responseJSON))
-        .catch(alert("Ruh_Roh! Something went wrong! Maybe try again later"))
-} */
+        .then(responseJson => console.log(responseJson))
+        .catch(alert("Ruh_Roh! Something went wrong! Maybe try again later"));
+}
+
 
 
 function storeNumber(){
-    $(".submit").submit(function(event){
+    $(".submit").click(function(event){
         event.preventDefault();
         let number = $(".number").val()
         console.log(number)
+        fetchDogImage()
     })
 }
 
-function submitTheForm(){
-    $(".submit").click(function(event){
-        event.preventDefault();
-        alert("your number is: " + number)
-    })
-}
-
-function displayDogImage(){
+/*function displayDogImage(){
     $(".doge").forEach().replaceWith(
         `<img class="doge" src="${responseJSON}"alt="doggie"></img>`
     )
@@ -33,5 +28,5 @@ function displayDogImage(){
 function funTitle(){
     $(".doge").removeClass(hidden)
 }
-
-submitTheForm()
+*/
+storeNumber()
