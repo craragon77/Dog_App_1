@@ -18,20 +18,20 @@ function storeNumber(){
 //the issue appears to be that by hardcoding the individual image, you can only get them one at a time
 function displayDogImage(responseJson){
     //console.log(responseJson.message)
-    $(".doge").replaceWith(
-        `<section class="doge">
+    $(".zoinks").replaceWith(
+        `<section class="zoinks">
             <h2>Zoinks! That's a lot of dogs</h2>
+            <div class="doge"></div>
         </section>`
     )
+    dogLoop(responseJson)
 }
+
 function dogLoop(responseJson){
-    for (let i = 0; i <= responseJson.length; i++){
+    for (let i = 0; i < responseJson.message.length; i++){
         $(".doge").append(
-            `<img src="${responseJson.message[i]}" alt="placeholder>`
+            `<img src="${responseJson.message[i]}" alt="placeholder">`
         )
     }
 }
-
-
-
 storeNumber()
