@@ -11,13 +11,14 @@ function storeNumber(){
     $(".submit").click(function(event){
         event.preventDefault();
         let number = $(".number").val() === "" ? 3 : $(".number").val();
-        console.log(number)
+        if (number > 50 || number < 1) {
+            alert("Please pic a number between 1 and 50!")
+        } else {
         fetchDogImage(number)
+        }
     })
 }
-//the issue appears to be that by hardcoding the individual image, you can only get them one at a time
 function displayDogImage(responseJson){
-    //console.log(responseJson.message)
     $(".zoinks").replaceWith(
         `<section class="zoinks">
             <h2>Zoinks! That's a lot of dogs</h2>
